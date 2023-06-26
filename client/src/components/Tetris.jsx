@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
 import { StyledTetrisWrapper, StyledTetris } from './styles/StyledTetris';
-import { createStage, checkCollision } from '../components/gameHelpers';
+import { createStage, checkCollision } from '../gameHelpers';
 
 // Custom Hooks
-// Custom Hooks
-import {useInterval} from './hooks/useInterval';
-import { usePlayer } from './hooks/usePlayer';
-import { useStage } from './hooks/useStage';
-import { useGameStatus } from './hooks/useGameStatus';
+import { useInterval } from '../hooks/useInterval';
+import { usePlayer } from '../hooks/usePlayer';
+import { useStage } from '../hooks/useStage';
+import { useGameStatus } from '../hooks/useGameStatus';
 
 import Stage from './Stage';
 import Display from './Display';
 import StartButton from './StartButton';
 
-const Placeholder = () => {
+const Tetris = () => {
   const [dropTime, setDropTime] = useState(null);
   const [gameOver, setGameOver] = useState(false);
 
@@ -99,8 +98,8 @@ const Placeholder = () => {
     }
   };
 
-    return (
-      <StyledTetrisWrapper
+  return (
+    <StyledTetrisWrapper
       role="button"
       tabIndex="0"
       onKeyDown={e => move(e)}
@@ -124,5 +123,5 @@ const Placeholder = () => {
     </StyledTetrisWrapper>
   );
 };
-    
-  export default Placeholder;
+
+export default Tetris;

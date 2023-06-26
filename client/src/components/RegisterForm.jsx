@@ -61,8 +61,9 @@ const RegisterForm = () => {
     
     }  
     return(
+        <div className='form'>
     <div>
-        <h1>Register Here</h1>
+        <h1 class="theme">Register</h1>
         <form action="" className="col-md-6 mx-auto" onSubmit={handleSubmit}>
             <div className="form-group">
                 <label htmlFor="firstName">First Name</label>
@@ -89,9 +90,10 @@ const RegisterForm = () => {
                 <input type="password" name="confirmPassword" className="form-control" onChange={handleChange}/>
                 {errors.confirmPassword? <p className="text-danger">{errors.confirmPassword}</p> : ""}
             </div>
-            <button className="btn btn-primary">Register</button>
+            <button className="btn btn-outline-success">Login</button>
 
         </form>
+    </div>
     </div>
   )
 }

@@ -3,6 +3,8 @@ import axios from 'axios'
 import {useNavigate} from 'react-router-dom'
 import { Link } from "react-router-dom"
 
+
+
 const LoginForm = () => {
     const navigate = useNavigate();
     const [userInfo, setUserInfo] = useState({
@@ -47,8 +49,10 @@ const LoginForm = () => {
     
     }               
     return(
-        <div className='className="col-md-6 mx-auto'>
-            <h1>Login Player</h1>
+        
+        <div className='className="col-md-6 mx-auto'> 
+             <div className='form'>
+            <h1 class="theme">Login Player</h1>
               <form action="" className="col-md-6 mx-auto" onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="email">Email:</label>
@@ -60,13 +64,15 @@ const LoginForm = () => {
                         {errors.password? <p className="text-danger">{errors.password}</p> : ""}
                 </div>
                 <div className="form-group">
-                    <button className="btn btn-info mt-3">Login</button>
+                    <button className="btn btn-outline-success">Login</button>
                 </div>
               </form>
             <span className="global-nav-text">
                 <Link to="/user/register">Create New Account</Link>
-            </span>
-        </div>
+            </span> 
+              </div>
+       </div>
+     
     )   
 }
 export default LoginForm

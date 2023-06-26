@@ -36,3 +36,55 @@
     transform: rotate(360deg);
   }
 }
+
+.App {
+  text-align: center;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-image: url(https://i.pinimg.com/564x/de/d2/10/ded2105a4d4f9d44962b45a6e8b2cb67.jpg)
+}
+
+.auth-form-container, .login-form, .register-form {
+  display: flex;
+  flex-direction: column;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 600px) {
+  .auth-form-container {
+    padding: 5rem;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: 0.5rem;
+  }
+}
+
+label {
+  text-align: left;
+  padding: 0.25rem 0;
+}
+
+input {
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+}
+
+.link-btn {
+  background: none;
+  color: white;
+  text-decoration: underline;
+}
+
+.form{
+  background-color:  #000000;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+} 
+.theme{
+  color: green;
+}
+
